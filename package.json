@@ -13,6 +13,8 @@
   "author": "Max Stoiber",
   "license": "MIT",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "analyze:clean": "rimraf stats.json",
     "preanalyze": "npm run analyze:clean",
     "analyze": "node ./internals/scripts/analyze.js",
@@ -66,6 +68,7 @@
     "cross-env": "5.2.0",
     "express": "4.16.4",
     "fontfaceobserver": "2.0.13",
+    "gh-pages": "^2.0.1",
     "history": "4.7.2",
     "hoist-non-react-statics": "3.0.1",
     "immutable": "3.8.2",
